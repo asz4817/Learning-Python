@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<title>Todo List</title>
+{% endblock %}
+
+{% block body%}
+<div class="content">
+    <h1 style = "text-align: center;">Todo List</h1>
+
+    <div class="split left">
+        {% if tasks|length < 1%}
+        <h4 style = "text-align: center;">There are no tasks. Create one now!</h4>
+        {%else%}
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Task</th>
+                <th>Date Added</th>
+                <th>Due Date</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            
+            <tbody class="hover">
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+                    <td>{{ task.due }}</td>
+                    <td class="actions">
+                        <a href="/update/{{task.id}}" target="_blank">&#xf5a1;</a>
+                    </td>
+                    <td class="actions">
+                        <a href="/delete/{{task.id}}" target="_blank">X</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {%endif%}
+    </div>
+
+    <div class="split right">
+
+        <div class="login-box">
+            <form action="/" method = "POST">
+              <div class="user-box">
+                <label for="content">Item: </label>
+                <input type="text" id="content" name="content">
+              </div>
+              <div class="user-box">
+                <label for="due">Due: </label>
+                <input type="date" id="due" name="due">
+              </div>
+              <input type="submit" class="button" value="Click to Add Item">
+            </form>
+        </div>
+
+    </div>
+
+</div>
+    
+{% endblock %}

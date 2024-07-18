@@ -1,0 +1,142 @@
+body {
+    margin: 0px;
+    /* background-color: #3e94ec; */
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    text-rendering: optimizeLegibility;
+  }
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    top: 30%;
+  }
+  
+  .right {
+    right: 0;
+  }
+
+.content{
+    margin: 0 auto;
+}
+
+.table {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: auto;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 200%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+  }
+
+
+th{
+    color:#D5DDE5;;
+    background:#1b1e24;
+    border-bottom:4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size:18px;
+    font-weight: 100;
+    padding:10px;
+    text-align:center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+tr {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    color:#666B85;
+    font-size:16px;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+    background: #E6E6FA;
+}
+
+td {
+    background:#FFFFFF;
+    padding:5px;
+    text-align:center;
+    vertical-align:middle;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border: #1b1e24;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+.button {
+  background-color: #E6E6FA;
+  border-radius: 10px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #150101;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  padding: 8px;
+  text-align: center;
+  display: block; 
+  margin: 0 auto;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e7e7ff;
+}
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
+    width: 326px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+  }
+  
+
+#content {
+    margin-top: 20px;
+    width: 85%;
+}
